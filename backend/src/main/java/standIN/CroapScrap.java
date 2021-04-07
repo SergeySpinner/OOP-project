@@ -53,7 +53,7 @@ public class CroapScrap {
 
 
         String bkwtAquaUrl = "https://aquamarket.ua/uk/grechka/10047-khutorok-800-g-krupa-grechana-m-u.html";
-        String bkwtAquaPriceHTML = "<<div class=\"product-price\">40<sup>";
+        String bkwtAquaPriceHTML = "<div class=\"product-price\">48<sup>00</sup><span class=\"currency\">грн</span>\n" + "</div>";//"<<div class=\"product-price\">40<sup>";
         String bkwtAquaNameHTML = "<td>Хуторок</td>";
         String bkwtAquaCategoryHTML = "<th colspan=\"2\">ХАРАКТЕРИСТИКИ ХУТОРОК, КРУПА ГРЕЧАНА, СМАЖЕНА, 800 Г</th>";
         String bkwtAquaProducerHTML = "<td>Україна</td>";
@@ -104,7 +104,7 @@ public class CroapScrap {
         arraySecond.put("name: " + temp2.parse().getName());
         arraySecond.put("category: " + temp2.parse().getCategory());
         arraySecond.put("producer: " + temp2.parse().getProducer());
-        arraySecond.put("weight: " + temp2.parse().getResource());
+        arraySecond.put("weight: " + temp2.parse().getWeight());
         arraySecond.put("resource: " + temp2.getUrl());
         arraySecond.put("image URL: " + imgEpicUrl);
 
@@ -114,7 +114,7 @@ public class CroapScrap {
         arrayThird.put("name: " + temp3.parse().getName());
         arrayThird.put("category: " + temp3.parse().getCategory());
         arrayThird.put("producer: " + temp3.parse().getProducer());
-        arrayThird.put("weight: " + temp3.parse().getResource());
+        arrayThird.put("weight: " + temp3.parse().getWeight());
         arrayThird.put("resource: " + temp3.getUrl());
         arrayThird.put("image URL: " + imgAquaUrl);
 
@@ -124,7 +124,7 @@ public class CroapScrap {
         arrayFourth.put("name: " + temp4.parse().getName());
         arrayFourth.put("category: " + temp4.parse().getCategory());
         arrayFourth.put("producer: " + temp4.parse().getProducer());
-        arrayFourth.put("weight: " + temp4.parse().getResource());
+        arrayFourth.put("weight: " + temp4.parse().getWeight());
         arrayFourth.put("resource: " + temp4.getUrl());
         arrayFourth.put("image URL: " + imgAquaSecUrl);
 
@@ -134,7 +134,7 @@ public class CroapScrap {
         arrayFifth.put("name: " + temp5.parse().getName());
         arrayFifth.put("category: " + temp5.parse().getCategory());
         arrayFifth.put("producer: " + temp5.parse().getProducer());
-        arrayFifth.put("weight: " + temp5.parse().getResource());
+        arrayFifth.put("weight: " + temp5.parse().getWeight());
         arrayFifth.put("resource: " + temp5.getUrl());
         arrayFifth.put("image URL: " + imgEpicSecUrl);
 
@@ -327,8 +327,24 @@ public class CroapScrap {
 
         Parsing temp4 = new Parsing(cornEpicSecUrl,cornEpicSecPriceHTML,cornEpicSecNameHTML,
                 cornEpicSecCategoryHTML, cornEpicSecWeightHTML,cornEpicSecProducerHTML);
-        
-        
+
+
+//        Document cornEpicSecPriceDoc = Jsoup.parse(cornEpicSecPriceHTML, cornEpicSecUrl);
+//        Document cornEpicSecNameDoc = Jsoup.parse(cornEpicSecNameHTML, cornEpicSecUrl);
+//        Document cornEpicSecCategoryDoc = Jsoup.parse(cornEpicSecCategoryHTML, cornEpicSecUrl);
+//        Document cornEpicSecProducerDoc = Jsoup.parse(cornEpicSecProducerHTML, cornEpicSecUrl);
+//        Document cornEpicSecWeightDoc = Jsoup.parse(cornEpicSecWeightHTML, cornEpicSecUrl);
+//
+//
+//        String cornEpicSecPrice = cornEpicSecPriceDoc.body().text();
+//        String cornEpicSecName = cornEpicSecNameDoc.body().text();
+//        String cornEpicSecCategory = cornEpicSecCategoryDoc.body().text();
+//        String cornEpicSecProducer = cornEpicSecProducerDoc.body().text();
+//        String cornEpicSecWeight = cornEpicSecWeightDoc.body().text();
+//        Croap cornEpicSec = new Croap(cornEpicSecPrice, cornEpicSecName, cornEpicSecCategory, cornEpicSecProducer,
+//                cornEpicSecWeight, cornEpicSecUrl, imgEpicSecUrl);
+
+
         String cornAquaSecUrl = "https://aquamarket.ua/uk/kukurudzyana-krupa/37061-skviryanka-800-g-krupa-kukurudzyana-shlifovana.html";
         String cornAquaSecPriceHTML = "<div class=\"product-price\">\r\n                                                            23<sup>";
         String cornAquaSecNameHTML = "<td>Сквирянка</td>";
@@ -338,8 +354,27 @@ public class CroapScrap {
 
         Parsing temp5 = new Parsing(cornAquaSecUrl,cornAquaSecPriceHTML,cornAquaSecNameHTML,
                 cornAquaSecCategoryHTML, cornAquaSecWeightHTML,cornAquaSecProducerHTML);
-        
-        
+
+
+//        Document cornAquaSecPriceDoc = Jsoup.parse(cornAquaSecPriceHTML, cornAquaSecUrl);
+//        Document cornAquaSecNameDoc = Jsoup.parse(cornAquaSecNameHTML, cornAquaSecUrl);
+//        Document cornAquaSecCategoryDoc = Jsoup.parse(cornAquaSecCategoryHTML, cornAquaSecUrl);
+//        Document cornAquaSecProducerDoc = Jsoup.parse(cornAquaSecProducerHTML, cornAquaSecUrl);
+//        Document cornAquaSecWeightDoc = Jsoup.parse(cornAquaSecWeightHTML, cornAquaSecUrl);
+//
+//
+//        String cornAquaSecPrice = cornAquaSecPriceDoc.body().text();
+//        String cornAquaSecName = cornAquaSecNameDoc.body().text();
+//        String cornAquaSecCategory = cornAquaSecCategoryDoc.body().text();
+//        String cornAquaSecProducer = cornAquaSecProducerDoc.body().text();
+//        String cornAquaSecWeight = cornAquaSecWeightDoc.body().text();
+
+
+//        Croap cornAquaSec = new Croap(cornAquaSecPrice, cornAquaSecName, cornAquaSecCategory, cornAquaSecProducer,
+//                cornAquaSecWeight, cornAquaSecUrl, imgAquaSecUrl);
+//        corns.add(cornAquaSec);
+
+
         JSONObject cornJson = new JSONObject();
         JSONArray arrayFirst = new JSONArray();
         arrayFirst.put("price: " + temp1.parse().getPrice());
